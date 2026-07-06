@@ -6,10 +6,10 @@ import { business } from "@/lib/data";
  */
 export default function StickyCallButton() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-ardoise-900/10 bg-lin-50/95 p-3 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-encre-900/10 bg-brume-50/95 p-3 backdrop-blur md:hidden">
       <a
         href={business.phoneHref}
-        className="flex items-center justify-center gap-2 rounded-full bg-terracotta-600 px-5 py-3 text-base font-semibold text-lin-50 shadow-soft transition-colors active:bg-terracotta-700"
+        className="flex items-center justify-center gap-2 rounded-full bg-rouge-600 px-5 py-3 text-base font-bold text-brume-50 shadow-soft transition-colors active:bg-rouge-700"
       >
         <svg
           aria-hidden="true"

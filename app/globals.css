@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-lin-50 text-ardoise-900 font-body antialiased pb-20 md:pb-0;
+    @apply bg-brume-50 text-encre-900 font-body antialiased pb-20 md:pb-0;
   }
 
   h1,
@@ -19,16 +19,6 @@
 }
 
 @layer utilities {
-  /* Texture "enduit" discrète pour casser le plat des aplats de couleur */
-  .bg-enduit {
-    background-image: radial-gradient(
-        circle at 20% 20%,
-        rgba(30, 26, 22, 0.035) 0,
-        transparent 45%
-      ),
-      radial-gradient(circle at 80% 60%, rgba(30, 26, 22, 0.03) 0, transparent 40%);
-  }
-
   .text-balance {
     text-wrap: balance;
   }

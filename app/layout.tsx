@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { business } from "@/lib/data";
 import StickyCallButton from "@/components/StickyCallButton";
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-fraunces",
+  weight: ["700", "800"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -101,7 +101,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fr" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${manrope.variable} ${inter.variable}`}>
       <body>
         <script
           type="application/ld+json"

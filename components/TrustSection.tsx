@@ -3,20 +3,20 @@ import Stars from "./Stars";
 
 export default function TrustSection() {
   return (
-    <section id="avis" className="bg-ardoise-900 py-20 text-lin-50">
+    <section id="avis" className="bg-bleu-900 py-20 text-brume-50">
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <div className="mb-12 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-terracotta-300">
+          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-rouge-400">
             Avis clients
           </p>
-          <h2 className="font-display text-3xl font-semibold text-balance sm:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold text-balance sm:text-4xl">
             La confiance de nos clients, chantier après chantier
           </h2>
-          <div className="mt-6 flex flex-wrap gap-6 text-sm text-lin-200">
+          <div className="mt-6 flex flex-wrap gap-6 text-sm text-bleu-100">
             <div className="flex items-center gap-2">
               <Stars />
               <span>
-                <strong className="font-semibold text-lin-50">
+                <strong className="font-semibold text-brume-50">
                   {business.rating.google.value.toFixed(1)}/5
                 </strong>{" "}
                 sur Google ({business.rating.google.count} avis)
@@ -25,7 +25,7 @@ export default function TrustSection() {
             <div className="flex items-center gap-2">
               <Stars />
               <span>
-                <strong className="font-semibold text-lin-50">
+                <strong className="font-semibold text-brume-50">
                   {business.rating.pagesJaunes.value.toFixed(1)}/5
                 </strong>{" "}
                 sur Pages Jaunes ({business.rating.pagesJaunes.count} avis)
@@ -38,17 +38,17 @@ export default function TrustSection() {
           {reviews.map((review, index) => (
             <figure
               key={review.author + index}
-              className="mb-6 break-inside-avoid rounded-2xl border border-lin-50/10 bg-ardoise-800 p-6"
+              className="mb-6 break-inside-avoid rounded-2xl border border-brume-50/10 bg-bleu-700 p-6"
             >
               <Stars />
-              <blockquote className="mt-4 text-[15px] leading-relaxed text-lin-100">
+              <blockquote className="mt-4 text-[15px] leading-relaxed text-bleu-50">
                 &laquo; {review.quote} &raquo;
               </blockquote>
-              <figcaption className="mt-4 text-sm font-medium text-terracotta-300">
+              <figcaption className="mt-4 text-sm font-medium text-rouge-300">
                 {review.author} — {review.source}
               </figcaption>
               {review.ownerReply && (
-                <p className="mt-3 border-l-2 border-terracotta-500 pl-3 text-sm italic text-lin-200">
+                <p className="mt-3 border-l-2 border-rouge-500 pl-3 text-sm italic text-bleu-100">
                   Réponse de Cédric Roullier : « {review.ownerReply} »
                 </p>
               )}
@@ -60,7 +60,7 @@ export default function TrustSection() {
           href={business.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-block text-sm font-semibold text-terracotta-300 underline underline-offset-4 hover:text-terracotta-200"
+          className="mt-2 inline-block text-sm font-semibold text-rouge-300 underline underline-offset-4 hover:text-rouge-200"
         >
           Voir tous les avis sur notre fiche Google →
         </a>

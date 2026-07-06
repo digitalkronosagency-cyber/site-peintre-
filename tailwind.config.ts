@@ -8,36 +8,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Fond chaleureux type lin naturel / plâtre brut
-        lin: {
-          50: "#FBF8F2",
-          100: "#F4EDDF",
-          200: "#E8DCC3",
+        // Brume : fond clair neutre
+        brume: {
+          50: "#FFFFFF",
+          100: "#F4F6F9",
+          200: "#E7ECF2",
         },
-        // Ardoise : charbon chaud utilisé pour les textes et le footer
-        ardoise: {
-          900: "#1E1A16",
-          800: "#2B241E",
-          700: "#3E352C",
-          600: "#544838",
-          400: "#7A6B58",
+        // Encre : texte et sections sombres
+        encre: {
+          900: "#14181F",
+          800: "#1E242D",
+          700: "#2B323C",
+          600: "#454E5A",
+          400: "#7C8794",
         },
-        // Terracotta : couleur pot de peinture / terre cuite, accent principal
-        terracotta: {
-          50: "#FCEEE6",
-          100: "#F7D8C5",
-          300: "#E29A6A",
-          500: "#C1602F",
-          600: "#A84E23",
-          700: "#853D1B",
+        // Bleu : couleur de marque principale (confiance, artisanat sérieux)
+        bleu: {
+          50: "#EAF1FB",
+          100: "#D3E3F7",
+          300: "#7FA8E0",
+          500: "#1D5DB8",
+          600: "#164A94",
+          700: "#103A73",
+          900: "#0B2A54",
         },
-        // Sauge : vert volet patiné, accent secondaire
-        sauge: {
-          100: "#E4E9DE",
-          300: "#AEBBA0",
-          500: "#5F7052",
-          600: "#4B5A40",
-          700: "#3A4732",
+        // Rouge : accent d'action (appel, urgence)
+        rouge: {
+          50: "#FDECEA",
+          100: "#F8CFC9",
+          500: "#DC3B2E",
+          600: "#B92E22",
+          700: "#8F2119",
         },
         // Or patiné pour les étoiles / notes
         or: {
@@ -46,14 +47,14 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        display: ["var(--font-manrope)", "system-ui", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         content: "1280px",
       },
       boxShadow: {
-        soft: "0 12px 32px -16px rgba(30, 26, 22, 0.35)",
+        soft: "0 20px 45px -20px rgba(11, 42, 84, 0.35)",
       },
     },
   },

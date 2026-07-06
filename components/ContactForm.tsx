@@ -39,8 +39,8 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-sauge-500/30 bg-sauge-100 p-6 text-sauge-700">
-        <p className="font-display text-xl font-semibold">
+      <div className="rounded-2xl border border-green-600/30 bg-green-50 p-6 text-green-700">
+        <p className="font-display text-xl font-bold">
           Merci pour votre demande !
         </p>
         <p className="mt-2 text-sm">
@@ -55,7 +55,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ardoise-800">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-encre-800">
             Nom complet
           </label>
           <input
@@ -64,11 +64,11 @@ export default function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="w-full rounded-xl border border-ardoise-900/15 bg-lin-50 px-4 py-2.5 text-ardoise-900 outline-none transition-colors focus:border-terracotta-500"
+            className="w-full rounded-xl border border-encre-900/15 bg-brume-50 px-4 py-2.5 text-encre-900 outline-none transition-colors focus:border-bleu-500"
           />
         </div>
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ardoise-800">
+          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-encre-800">
             Téléphone
           </label>
           <input
@@ -77,13 +77,13 @@ export default function ContactForm() {
             type="tel"
             required
             autoComplete="tel"
-            className="w-full rounded-xl border border-ardoise-900/15 bg-lin-50 px-4 py-2.5 text-ardoise-900 outline-none transition-colors focus:border-terracotta-500"
+            className="w-full rounded-xl border border-encre-900/15 bg-brume-50 px-4 py-2.5 text-encre-900 outline-none transition-colors focus:border-bleu-500"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ardoise-800">
+        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-encre-800">
           Email
         </label>
         <input
@@ -92,18 +92,18 @@ export default function ContactForm() {
           type="email"
           required
           autoComplete="email"
-          className="w-full rounded-xl border border-ardoise-900/15 bg-lin-50 px-4 py-2.5 text-ardoise-900 outline-none transition-colors focus:border-terracotta-500"
+          className="w-full rounded-xl border border-encre-900/15 bg-brume-50 px-4 py-2.5 text-encre-900 outline-none transition-colors focus:border-bleu-500"
         />
       </div>
 
       <div>
-        <label htmlFor="projectType" className="mb-1.5 block text-sm font-medium text-ardoise-800">
+        <label htmlFor="projectType" className="mb-1.5 block text-sm font-medium text-encre-800">
           Type de projet
         </label>
         <select
           id="projectType"
           name="projectType"
-          className="w-full rounded-xl border border-ardoise-900/15 bg-lin-50 px-4 py-2.5 text-ardoise-900 outline-none transition-colors focus:border-terracotta-500"
+          className="w-full rounded-xl border border-encre-900/15 bg-brume-50 px-4 py-2.5 text-encre-900 outline-none transition-colors focus:border-bleu-500"
           defaultValue="Peinture intérieure"
         >
           <option>Peinture intérieure</option>
@@ -115,7 +115,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ardoise-800">
+        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-encre-800">
           Décrivez votre projet
         </label>
         <textarea
@@ -123,20 +123,20 @@ export default function ContactForm() {
           name="message"
           required
           rows={4}
-          className="w-full rounded-xl border border-ardoise-900/15 bg-lin-50 px-4 py-2.5 text-ardoise-900 outline-none transition-colors focus:border-terracotta-500"
+          className="w-full rounded-xl border border-encre-900/15 bg-brume-50 px-4 py-2.5 text-encre-900 outline-none transition-colors focus:border-bleu-500"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-full bg-terracotta-600 px-6 py-3.5 text-base font-semibold text-lin-50 shadow-soft transition-colors hover:bg-terracotta-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-full bg-rouge-600 px-6 py-3.5 text-base font-bold text-brume-50 shadow-soft transition-colors hover:bg-rouge-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === "loading" ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>
 
       {status === "error" && (
-        <p className="text-sm font-medium text-terracotta-700">{errorMessage}</p>
+        <p className="text-sm font-medium text-rouge-700">{errorMessage}</p>
       )}
     </form>
   );

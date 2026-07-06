@@ -13,18 +13,18 @@ export default function MentionsLegales() {
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
       <Link
         href="/"
-        className="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700"
+        className="text-sm font-semibold text-bleu-600 hover:text-bleu-700"
       >
         ← Retour à l&apos;accueil
       </Link>
 
-      <h1 className="mt-6 font-display text-3xl font-semibold text-ardoise-900">
+      <h1 className="mt-6 font-display text-3xl font-semibold text-encre-900">
         Mentions légales
       </h1>
 
-      <div className="mt-8 space-y-8 text-[15px] leading-relaxed text-ardoise-700">
+      <div className="mt-8 space-y-8 text-[15px] leading-relaxed text-encre-700">
         <section>
-          <h2 className="font-display text-xl font-semibold text-ardoise-900">
+          <h2 className="font-display text-xl font-semibold text-encre-900">
             Éditeur du site
           </h2>
           <p className="mt-2">
@@ -43,7 +43,7 @@ export default function MentionsLegales() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-ardoise-900">
+          <h2 className="font-display text-xl font-semibold text-encre-900">
             Hébergement
           </h2>
           <p className="mt-2">
@@ -53,7 +53,7 @@ export default function MentionsLegales() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-ardoise-900">
+          <h2 className="font-display text-xl font-semibold text-encre-900">
             Propriété intellectuelle
           </h2>
           <p className="mt-2">
@@ -64,7 +64,7 @@ export default function MentionsLegales() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-ardoise-900">
+          <h2 className="font-display text-xl font-semibold text-encre-900">
             Données personnelles
           </h2>
           <p className="mt-2">
