@@ -54,6 +54,26 @@ export default function Footer() {
                   Demander un devis
                 </a>
               </li>
+              <li>
+                <Link
+                  href="/admin"
+                  className="inline-flex items-center gap-1.5 text-encre-500 hover:text-bleu-600"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-3.5 w-3.5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 1a4 4 0 0 0-4 4v2H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V5a4 4 0 0 0-4-4Zm2 6V5a2 2 0 1 0-4 0v2h4Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Espace admin
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

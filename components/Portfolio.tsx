@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { listPhotos } from "@/lib/blob-photos";
 import PaintedPlaceholder from "./PaintedPlaceholder";
 
 type GalleryItem = {
@@ -6,10 +8,10 @@ type GalleryItem = {
   span: string;
 };
 
-// NOTE : emplacements en attente des vraies photos de chantier du client
-// (voir README « Ajouter les photos réelles »). Les libellés ci-dessous
-// deviendront les attributs alt des photos définitives.
-const gallery: GalleryItem[] = [
+// NOTE : emplacements affichés tant qu'aucune photo n'a été ajoutée depuis
+// l'espace admin (/admin). Les libellés ci-dessous deviennent les attributs
+// alt suggérés lors de l'ajout des photos définitives.
+const placeholderGallery: GalleryItem[] = [
   {
     label:
       "Rénovation cuisine, peinture de placards avant/après — Mauges-sur-Loire",
@@ -38,7 +40,9 @@ const gallery: GalleryItem[] = [
   },
 ];
 
-export default function Portfolio() {
+export default async function Portfolio() {
+  const photos = await listPhotos();
+
   return (
     <section id="realisations" className="bg-brume-100/60 py-20">
       <div className="mx-auto max-w-content px-5 sm:px-8">
@@ -52,22 +56,43 @@ export default function Portfolio() {
               nettoyage final
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-encre-600">
-            Plus de 95 photos de chantiers sont disponibles sur notre fiche
-            Google — un aperçu bientôt complété ici.
-          </p>
+          {photos.length === 0 && (
+            <p className="max-w-sm text-sm text-encre-600">
+              Plus de 95 photos de chantiers sont disponibles sur notre fiche
+              Google — un aperçu bientôt complété ici.
+            </p>
+          )}
         </div>
 
-        <div className="grid auto-rows-[160px] grid-cols-1 gap-4 sm:grid-cols-3 sm:auto-rows-[180px]">
-          {gallery.map((item) => (
-            <PaintedPlaceholder
-              key={item.label}
-              variant={item.variant}
-              label={item.label}
-              className={`rounded-2xl ${item.span}`}
-            />
-          ))}
-        </div>
+        {photos.length > 0 ? (
+          <div className="grid gap-4 sm:grid-cols-3">
+            {photos.map((photo) => (
+              <div
+                key={photo.url}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-soft"
+              >
+                <Image
+                  src={photo.url}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid auto-rows-[160px] grid-cols-1 gap-4 sm:grid-cols-3 sm:auto-rows-[180px]">
+            {placeholderGallery.map((item) => (
+              <PaintedPlaceholder
+                key={item.label}
+                variant={item.variant}
+                label={item.label}
+                className={`rounded-2xl ${item.span}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

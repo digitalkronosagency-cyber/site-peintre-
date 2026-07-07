@@ -9,6 +9,11 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+// Revalidation périodique pour refléter les photos ajoutées/supprimées
+// depuis l'espace admin (en plus du revalidatePath appelé après chaque
+// modification, voir app/api/admin/photos/route.ts).
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <>
